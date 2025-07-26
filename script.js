@@ -11,7 +11,7 @@ function downloadImage(url) {
   return new Promise((resolve, reject) => {
     const img = new Image();
     img.onload = () => resolve(img);
-    img.onerror = () => reject(Failed to load image: ${url});
+    img.onerror = () => `reject(Failed to load image: ${url})`;
     img.src = url;
   });
 }
